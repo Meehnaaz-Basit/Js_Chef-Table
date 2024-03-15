@@ -40,7 +40,9 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <a className="text-3xl font-bold text-indigo-950">Recipe Calories</a>
+          <a className="md:text-3xl text-xl font-bold text-indigo-950">
+            Recipe Calories
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -60,7 +62,7 @@ const Header = () => {
         </div>
         <div className="navbar-end">
           <label className="input input-bordered flex items-center gap-2 rounded-full">
-            <input type="text" className="grow" placeholder="Search" />
+            <input type="text" className="grow w-full" placeholder="Search" />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -74,7 +76,7 @@ const Header = () => {
               />
             </svg>
           </label>
-          <button className="bg-green-400 w-10 h-10 rounded-full flex items-center justify-center text-3xl ml-4">
+          <button className="bg-green-400 md:w-10 md:h-10 w-8 h-8 rounded-full flex items-center justify-center text-3xl ml-4">
             <IoPersonCircleOutline />
           </button>
         </div>

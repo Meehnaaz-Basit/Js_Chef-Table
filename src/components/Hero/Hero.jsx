@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="hero-overlay bg-opacity-60 rounded-3xl"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-4xl text-white">
-            <h1 className="mb-5 text-5xl font-bold">
+            <h1 className="mb-5 lg:text-5xl md:text-3xl text-2xl font-bold">
               Discover an exceptional cooking class tailored for you!
             </h1>
             <p className="mb-5">
