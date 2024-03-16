@@ -7,11 +7,13 @@ import Sidebars from "./components/Sidebars/Sidebars";
 
 function App() {
   const [foodInfos, setFoodInfos] = useState([]);
+  const [serialNumber, setSerialNumber] = useState(0);
   // want to cook handle
   const handleWantToCook = (cart) => {
     // console.log("clicked", foodInfo);
     const newFoodInfo = [...foodInfos, cart];
     setFoodInfos(newFoodInfo);
+    setSerialNumber(serialNumber + 1);
   };
 
   return (
@@ -37,7 +39,10 @@ function App() {
 
           {/* right */}
 
-          <Sidebars foodInfos={foodInfos}></Sidebars>
+          <Sidebars
+            foodInfos={foodInfos}
+            serialNumber={serialNumber}
+          ></Sidebars>
 
           {/*  */}
         </div>

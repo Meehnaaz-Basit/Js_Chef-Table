@@ -1,4 +1,4 @@
-const Wantcook = ({ foodInfo }) => {
+const Wantcook = ({ foodInfo, serialNumber }) => {
   // console.log(foodInfo);
   const { recipe_name, preparing_time, calories } = foodInfo;
 
@@ -11,7 +11,7 @@ const Wantcook = ({ foodInfo }) => {
             {/* row 1 */}
 
             <tr>
-              <th>01</th>
+              <th>{serialNumber}</th>
               <td>{recipe_name}</td>
               <td>{preparing_time} minutes</td>
               <td>{calories} calories</td>
