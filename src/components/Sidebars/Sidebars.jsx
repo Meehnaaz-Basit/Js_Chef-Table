@@ -54,8 +54,12 @@ const Sidebars = ({
             </tr>
           </thead>
         </table>
-        {currentCooking.map((currentTab, index) => (
-          <CurrentCooking key={index} currentTab={currentTab}></CurrentCooking>
+        {currentCooking.map((currentTab, id) => (
+          <CurrentCooking
+            key={id}
+            currentTab={currentTab}
+            serialNumber={id + 1}
+          ></CurrentCooking>
         ))}
         {/* <CurrentCooking currentCooking={currentCooking}></CurrentCooking> */}
       </div>
