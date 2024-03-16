@@ -3,7 +3,12 @@ import PropTypes from "prop-types";
 import Wantcook from "../Wantcook/Wantcook";
 import CurrentCooking from "../CurrentCooking/CurrentCooking";
 
-const Sidebars = ({ foodInfos, serialNumber, handlePreparing }) => {
+const Sidebars = ({
+  foodInfos,
+  serialNumber,
+  handlePreparing,
+  currentCooking,
+}) => {
   // const [preparedFoods, setPreparedFoods] = useState([]);
 
   return (
@@ -49,7 +54,10 @@ const Sidebars = ({ foodInfos, serialNumber, handlePreparing }) => {
             </tr>
           </thead>
         </table>
-        <CurrentCooking></CurrentCooking>
+        {currentCooking.map((currentTab, index) => (
+          <CurrentCooking key={index} currentTab={currentTab}></CurrentCooking>
+        ))}
+        {/* <CurrentCooking currentCooking={currentCooking}></CurrentCooking> */}
       </div>
       {/* current cooking ends */}
     </div>

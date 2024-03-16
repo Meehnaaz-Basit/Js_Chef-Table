@@ -33,7 +33,7 @@ function App() {
     const selectedRecipe = foodInfos.find((recipe) => recipe.recipe_id === id);
 
     if (selectedRecipe) {
-      // Remove the selected recipe from foodInfos
+      // remove data
       const updatedFoodInfos = foodInfos.filter(
         (recipe) => recipe.recipe_id !== id
       );
@@ -41,6 +41,7 @@ function App() {
 
       // Add the selected recipe to currentCooking
       setCurrentCooking([...currentCooking, selectedRecipe]);
+      // decrease num
       setSerialNumber(serialNumber - 1);
     }
   };
@@ -73,6 +74,7 @@ function App() {
             foodInfos={foodInfos}
             serialNumber={serialNumber}
             handlePreparing={handlePreparing}
+            currentCooking={currentCooking}
           ></Sidebars>
 
           {/*  */}
