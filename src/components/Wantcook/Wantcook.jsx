@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-const Wantcook = ({ foodInfo, serialNumber }) => {
+const Wantcook = ({ foodInfo, serialNumber, handleCurrentCooking }) => {
   // console.log(foodInfo);
   const { recipe_name, preparing_time, calories } = foodInfo;
 
@@ -17,7 +17,10 @@ const Wantcook = ({ foodInfo, serialNumber }) => {
               <td>{preparing_time} minutes</td>
               <td>{calories} calories</td>
               <td>
-                <button className="bg-green-400 px-5 py-2 rounded-full text-black font-semibold">
+                <button
+                  onClick={handleCurrentCooking}
+                  className="bg-green-400 px-5 py-2 rounded-full text-black font-semibold"
+                >
                   Preparing
                 </button>
               </td>

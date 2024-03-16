@@ -4,6 +4,7 @@ import { AiOutlineFire } from "react-icons/ai";
 
 const Recipe = ({ recipe, handleWantToCook }) => {
   const {
+    recipe_id,
     recipe_name,
     recipe_image,
     short_description,
@@ -31,10 +32,6 @@ const Recipe = ({ recipe, handleWantToCook }) => {
           {ingredients.map((ingredient, index) => (
             <li key={index}>{ingredient}</li>
           ))}
-          {/* <li>Lorem, ipsum dolor.</li>
-          <li>Lorem, ipsum dolor.</li>
-          <li>Lorem, ipsum dolor.</li>
-          <li>Lorem, ipsum dolor.</li> */}
         </ul>
       </div>
       {/* time */}

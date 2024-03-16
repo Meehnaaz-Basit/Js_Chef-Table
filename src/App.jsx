@@ -10,6 +10,17 @@ function App() {
   const [serialNumber, setSerialNumber] = useState(0);
   // want to cook handle
   const handleWantToCook = (cart) => {
+    //
+
+    // check if id exists
+    const isRecipeAlreadySelected = foodInfos.filter(
+      (existingRecipe) => existingRecipe.recipe_id === cart.recipe_id
+    );
+
+    if (isRecipeAlreadySelected.length > 0) {
+      alert("You already added this recipe.");
+      return;
+    }
     // console.log("clicked", foodInfo);
     const newFoodInfo = [...foodInfos, cart];
     setFoodInfos(newFoodInfo);

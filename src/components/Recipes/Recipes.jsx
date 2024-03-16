@@ -13,9 +13,9 @@ const Recipes = ({ handleWantToCook }) => {
 
   return (
     <div className="md:w-3/5 grid md:grid-cols-2 gap-6">
-      {recipes.map((recipe) => (
+      {recipes.map((recipe, id) => (
         <Recipe
-          key={recipe.id}
+          key={id}
           recipe={recipe}
           handleWantToCook={handleWantToCook}
         ></Recipe>
