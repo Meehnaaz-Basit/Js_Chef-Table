@@ -1,11 +1,10 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
 import Wantcook from "../Wantcook/Wantcook";
 import CurrentCooking from "../CurrentCooking/CurrentCooking";
 
-const Sidebars = ({ foodInfos, serialNumber }) => {
-  const handleCurrentCooking = () => {
-    console.log("clicked currently cooking button");
-  };
+const Sidebars = ({ foodInfos, serialNumber, handlePreparing }) => {
+  // const [preparedFoods, setPreparedFoods] = useState([]);
 
   return (
     <div className="md:w-2/5 h-min border rounded-2xl p-5">
@@ -30,7 +29,7 @@ const Sidebars = ({ foodInfos, serialNumber }) => {
             key={index}
             foodInfo={foodInfo}
             serialNumber={index + 1}
-            handleCurrentCooking={handleCurrentCooking}
+            handlePreparing={handlePreparing}
           ></Wantcook>
         ))}
       </div>

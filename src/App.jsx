@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+
 import Header from "./Header/Header";
 import Hero from "./components/Hero/Hero";
 import Recipes from "./components/Recipes/Recipes";
@@ -8,17 +9,15 @@ import Sidebars from "./components/Sidebars/Sidebars";
 function App() {
   const [foodInfos, setFoodInfos] = useState([]);
   const [serialNumber, setSerialNumber] = useState(0);
-  // want to cook handle
+  // want to cook
   const handleWantToCook = (cart) => {
-    //
-
     // check if id exists
     const isRecipeAlreadySelected = foodInfos.filter(
       (existingRecipe) => existingRecipe.recipe_id === cart.recipe_id
     );
 
     if (isRecipeAlreadySelected.length > 0) {
-      alert("You already added this recipe.");
+      alert("already selected");
       return;
     }
     // console.log("clicked", foodInfo);
@@ -27,6 +26,26 @@ function App() {
     setSerialNumber(serialNumber + 1);
   };
 
+  ///////
+  const [currentCooking, setCurrentCooking] = useState([]);
+  const handlePreparing = (id) => {
+    // console.log("clicked", id);
+    const selectedRecipe = foodInfos.find((recipe) => recipe.recipe_id === id);
+
+    if (selectedRecipe) {
+      // Remove the selected recipe from foodInfos
+      const updatedFoodInfos = foodInfos.filter(
+        (recipe) => recipe.recipe_id !== id
+      );
+      setFoodInfos(updatedFoodInfos);
+
+      // Add the selected recipe to currentCooking
+      setCurrentCooking([...currentCooking, selectedRecipe]);
+      setSerialNumber(serialNumber - 1);
+    }
+  };
+
+  ////
   return (
     <div className="container mx-auto max-w-[1300px] w-[98%] lg-w[84%]">
       <Header></Header>
@@ -53,6 +72,7 @@ function App() {
           <Sidebars
             foodInfos={foodInfos}
             serialNumber={serialNumber}
+            handlePreparing={handlePreparing}
           ></Sidebars>
 
           {/*  */}
