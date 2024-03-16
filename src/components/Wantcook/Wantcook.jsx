@@ -32,7 +32,7 @@ const Wantcook = ({ foodInfo, serialNumber }) => {
 
 Wantcook.propTypes = {
   foodInfo: PropTypes.object.isRequired,
-  serialNumber: PropTypes.object.isRequired,
+  serialNumber: PropTypes.number.isRequired,
 };
 
 export default Wantcook;

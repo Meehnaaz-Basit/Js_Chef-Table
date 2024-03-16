@@ -32,8 +32,8 @@ const Sidebars = ({ foodInfos, serialNumber }) => {
 };
 
 Sidebars.propTypes = {
-  foodInfos: PropTypes.object.isRequired,
-  serialNumber: PropTypes.object.isRequired,
+  foodInfos: PropTypes.array.isRequired,
+  serialNumber: PropTypes.number.isRequired,
 };
 
 export default Sidebars;
