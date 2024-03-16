@@ -19,7 +19,7 @@ const Wantcook = ({ foodInfo, serialNumber, handlePreparing }) => {
               <td>
                 <button
                   onClick={() => handlePreparing(recipe_id)}
-                  className="bg-green-400 px-5 py-2 rounded-full text-black font-semibold"
+                  className="bg-green-400 border-2 border-green-400 hover:bg-transparent hover:border-black transition-all px-5 py-2 rounded-full text-black font-semibold"
                 >
                   Preparing
                 </button>

@@ -4,18 +4,22 @@ const CurrentCooking = ({ currentTab, serialNumber }) => {
 
   return (
     <div>
+      {/*  */}
       <div className="overflow-x-auto">
         <table className="table">
-          <tbody className="text-center">
+          <tbody className="">
             <tr>
               <th>{serialNumber}</th>
               <td>{recipe_name} </td>
-              <td>{preparing_time} minutes</td>
-              <td>{calories} calories</td>
+              <td>{preparing_time}</td>
+              <td>{calories}</td>
             </tr>
           </tbody>
         </table>
       </div>
+      {/*  */}
+
+      {/*  */}
     </div>
   );
 };

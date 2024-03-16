@@ -5,10 +5,13 @@ import Header from "./Header/Header";
 import Hero from "./components/Hero/Hero";
 import Recipes from "./components/Recipes/Recipes";
 import Sidebars from "./components/Sidebars/Sidebars";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [foodInfos, setFoodInfos] = useState([]);
   const [serialNumber, setSerialNumber] = useState(0);
+  // const num = 0;
+
   // want to cook
   const handleWantToCook = (cart) => {
     // check if id exists
@@ -17,7 +20,9 @@ function App() {
     );
 
     if (isRecipeAlreadySelected.length > 0) {
-      alert("already selected");
+      toast.warn("This Recipe has already been selected !");
+
+      // alert("already selected");
       return;
     }
     // console.log("clicked", foodInfo);
@@ -80,6 +85,7 @@ function App() {
           {/*  */}
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }
