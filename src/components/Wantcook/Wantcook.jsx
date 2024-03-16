@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 const Wantcook = ({ foodInfo, serialNumber }) => {
   // console.log(foodInfo);
   const { recipe_name, preparing_time, calories } = foodInfo;
@@ -27,6 +28,11 @@ const Wantcook = ({ foodInfo, serialNumber }) => {
       {/*  */}
     </div>
   );
+};
+
+Wantcook.propTypes = {
+  foodInfo: PropTypes.object.isRequired,
+  serialNumber: PropTypes.object.isRequired,
 };
 
 export default Wantcook;

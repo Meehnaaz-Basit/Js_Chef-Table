@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Wantcook from "../Wantcook/Wantcook";
 
 const Sidebars = ({ foodInfos, serialNumber }) => {
@@ -28,6 +29,11 @@ const Sidebars = ({ foodInfos, serialNumber }) => {
       </div>
     </div>
   );
+};
+
+Sidebars.propTypes = {
+  foodInfos: PropTypes.object.isRequired,
+  serialNumber: PropTypes.object.isRequired,
 };
 
 export default Sidebars;

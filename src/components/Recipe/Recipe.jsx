@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { IoTimeOutline } from "react-icons/io5";
 import { AiOutlineFire } from "react-icons/ai";
 
@@ -56,6 +57,11 @@ const Recipe = ({ recipe, handleWantToCook }) => {
       </button>
     </div>
   );
+};
+
+Recipe.propTypes = {
+  recipe: PropTypes.object.isRequired,
+  handleWantToCook: PropTypes.object.isRequired,
 };
 
 export default Recipe;
