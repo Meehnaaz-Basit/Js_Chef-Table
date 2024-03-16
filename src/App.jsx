@@ -8,9 +8,10 @@ import Sidebars from "./components/Sidebars/Sidebars";
 function App() {
   const [foodInfos, setFoodInfos] = useState([]);
   // want to cook handle
-  const handleWantToCook = (foodInfo) => {
-    const newFoodData = [...foodInfos, foodInfo];
-    setFoodInfos(newFoodData);
+  const handleWantToCook = (cart) => {
+    // console.log("clicked", foodInfo);
+    const newFoodInfo = [...foodInfos, cart];
+    setFoodInfos(newFoodInfo);
   };
 
   return (
@@ -36,7 +37,7 @@ function App() {
 
           {/* right */}
 
-          <Sidebars></Sidebars>
+          <Sidebars foodInfos={foodInfos}></Sidebars>
 
           {/*  */}
         </div>

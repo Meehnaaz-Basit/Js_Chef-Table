@@ -12,7 +12,7 @@ const Recipe = ({ recipe, handleWantToCook }) => {
   } = recipe;
 
   return (
-    <div className="p-6 border rounded-2xl space-y-5">
+    <div className="p-6 border rounded-2xl shadow-xl space-y-5">
       <div>
         <img className="rounded-xl" src={recipe_image} alt="Recipe Image" />
       </div>
@@ -49,7 +49,7 @@ const Recipe = ({ recipe, handleWantToCook }) => {
       </div>
       {/*  */}
       <button
-        onClick={handleWantToCook}
+        onClick={() => handleWantToCook(recipe)}
         className="font-bold bg-green-400 py-3 px-6 rounded-full"
       >
         Want to Cook
