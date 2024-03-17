@@ -13,7 +13,7 @@ const Recipe = ({ recipe, handleWantToCook }) => {
   } = recipe;
 
   return (
-    <div className="p-6 border rounded-2xl shadow-xl space-y-5">
+    <div className="p-6 border rounded-2xl shadow-xl space-y-5 lg:mx-0 mx-4">
       <div>
         <img className="rounded-xl" src={recipe_image} alt="Recipe Image" />
       </div>

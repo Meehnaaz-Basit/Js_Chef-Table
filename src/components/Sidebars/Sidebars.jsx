@@ -77,7 +77,7 @@ const Sidebars = ({
                 ></CurrentCooking>
               ))}
               {/*  */}
-              <tr>
+              <tr className="border-b-0">
                 <td></td>
                 <td></td>
                 <td className="border-t-2 text-center">
