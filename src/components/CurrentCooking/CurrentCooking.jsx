@@ -3,24 +3,14 @@ const CurrentCooking = ({ currentTab, serialNumber }) => {
   const { recipe_name, preparing_time, calories } = currentTab;
 
   return (
-    <div>
-      {/*  */}
-      <div className="overflow-x-auto">
-        <table className="table">
-          <tbody className="">
-            <tr>
-              <th>{serialNumber}</th>
-              <td>{recipe_name} </td>
-              <td>{preparing_time}</td>
-              <td>{calories}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      {/*  */}
-
-      {/*  */}
-    </div>
+    <>
+      <tr>
+        <th>{serialNumber}</th>
+        <td>{recipe_name} </td>
+        <td className="text-center">{preparing_time}</td>
+        <td className="text-center">{calories}</td>
+      </tr>
+    </>
   );
 };
 

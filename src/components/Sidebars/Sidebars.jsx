@@ -10,31 +10,36 @@ const Sidebars = ({
   currentCooking,
 }) => {
   return (
-    <div className="md:w-2/5 h-min border rounded-2xl p-5">
+    <div className="lg:w-2/5 md:w-1/2 h-min border rounded-2xl p-5">
       {/* want to cook */}
+
       <div>
         <div className="text-center font-bold text-2xl border-b p-1 mb-5">
           <h1>Want to cook: {serialNumber}</h1>
         </div>
-        <table className="table">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Time</th>
-              <th>Calories</th>
-              <th></th>
-            </tr>
-          </thead>
-        </table>
-        {foodInfos.map((foodInfo, index) => (
-          <Wantcook
-            key={index}
-            foodInfo={foodInfo}
-            serialNumber={index + 1}
-            handlePreparing={handlePreparing}
-          ></Wantcook>
-        ))}
+        <div className="overflow-x-auto">
+          <table className="table table-xs">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Time (mins)</th>
+                <th>Calories</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {foodInfos.map((foodInfo, index) => (
+                <Wantcook
+                  key={index}
+                  foodInfo={foodInfo}
+                  serialNumber={index + 1}
+                  handlePreparing={handlePreparing}
+                ></Wantcook>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
       {/* want to cook ends */}
       {/* current cooking */}
@@ -48,19 +53,34 @@ const Sidebars = ({
               <tr className="">
                 <th></th>
                 <th>Name</th>
-                <th>Time (min)</th>
-                <th>Calories</th>
+                <th className="text-center">Time (mins)</th>
+                <th className="text-center">Calories</th>
               </tr>
             </thead>
+            <tbody>
+              {currentCooking.map((currentTab, id) => (
+                <CurrentCooking
+                  key={id}
+                  currentTab={currentTab}
+                  serialNumber={id + 1}
+                ></CurrentCooking>
+              ))}
+              {/*  */}
+              <tr>
+                <td></td>
+                <td></td>
+                <td className="border-t-2 text-center">
+                  Total Time = <br />
+                  <span></span>
+                </td>
+                <td className="border-t-2 text-center">
+                  Total Calories = <br />
+                  <span>0</span>
+                </td>
+              </tr>
+              {/*  */}
+            </tbody>
           </table>
-
-          {currentCooking.map((currentTab, id) => (
-            <CurrentCooking
-              key={id}
-              currentTab={currentTab}
-              serialNumber={id + 1}
-            ></CurrentCooking>
-          ))}
         </div>
       </div>
 

@@ -10,7 +10,6 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [foodInfos, setFoodInfos] = useState([]);
   const [serialNumber, setSerialNumber] = useState(0);
-  // const num = 0;
 
   // want to cook
   const handleWantToCook = (cart) => {
