@@ -32,6 +32,7 @@ function App() {
 
   ///////
   const [currentCooking, setCurrentCooking] = useState([]);
+
   const handlePreparing = (id) => {
     // console.log("clicked", id);
     const selectedRecipe = foodInfos.find((recipe) => recipe.recipe_id === id);

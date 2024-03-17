@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 const CurrentCooking = ({ currentTab, serialNumber }) => {
   // console.log("current", currentCooking);
   const { recipe_name, preparing_time, calories } = currentTab;
@@ -12,6 +13,11 @@ const CurrentCooking = ({ currentTab, serialNumber }) => {
       </tr>
     </>
   );
+};
+
+CurrentCooking.propTypes = {
+  currentTab: PropTypes.object.isRequired,
+  serialNumber: PropTypes.number.isRequired,
 };
 
 export default CurrentCooking;

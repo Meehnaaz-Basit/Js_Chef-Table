@@ -26,6 +26,7 @@ const Wantcook = ({ foodInfo, serialNumber, handlePreparing }) => {
 Wantcook.propTypes = {
   foodInfo: PropTypes.object.isRequired,
   serialNumber: PropTypes.number.isRequired,
+  handlePreparing: PropTypes.func.isRequired,
 };
 
 export default Wantcook;

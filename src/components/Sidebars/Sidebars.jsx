@@ -1,4 +1,3 @@
-import { useState } from "react";
 import PropTypes from "prop-types";
 import Wantcook from "../Wantcook/Wantcook";
 import CurrentCooking from "../CurrentCooking/CurrentCooking";
@@ -92,6 +91,8 @@ const Sidebars = ({
 Sidebars.propTypes = {
   foodInfos: PropTypes.array.isRequired,
   serialNumber: PropTypes.number.isRequired,
+  handlePreparing: PropTypes.func.isRequired,
+  currentCooking: PropTypes.array.isRequired,
 };
 
 export default Sidebars;
