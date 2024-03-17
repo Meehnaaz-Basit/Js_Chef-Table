@@ -41,7 +41,7 @@ const Header = () => {
             </ul>
           </div>
           <a className="md:text-3xl text-xl font-bold text-indigo-950">
-            Recipe Calories
+            Nourish Bite
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">

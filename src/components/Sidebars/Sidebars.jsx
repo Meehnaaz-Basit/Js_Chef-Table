@@ -8,8 +8,20 @@ const Sidebars = ({
   handlePreparing,
   currentCooking,
 }) => {
+  // console.log(currentCooking, "CurrentCooking");
+  // time
+  let totalPreparationTime = 0;
+  for (let i = 0; i < currentCooking.length; i++) {
+    totalPreparationTime += currentCooking[i].preparing_time;
+  }
+  // calories
+  let totalCalories = 0;
+  for (let i = 0; i < currentCooking.length; i++) {
+    totalCalories += currentCooking[i].calories;
+  }
+  //
   return (
-    <div className="lg:w-2/5 md:w-1/2 h-min border rounded-2xl p-5">
+    <div className="lg:w-2/5 md:w-1/2 h-min border rounded-2xl lg:p-5 p-1 lg:mt-0 mt-8">
       {/* want to cook */}
 
       <div>
@@ -19,7 +31,7 @@ const Sidebars = ({
         <div className="overflow-x-auto">
           <table className="table table-xs">
             <thead>
-              <tr>
+              <tr className="text-center">
                 <th></th>
                 <th>Name</th>
                 <th>Time (mins)</th>
@@ -47,7 +59,7 @@ const Sidebars = ({
           <h1>Currently Cooking: {currentCooking.length}</h1>
         </div>
         <div className="overflow-x-auto">
-          <table className="table">
+          <table className="table table-xs">
             <thead>
               <tr className="">
                 <th></th>
@@ -70,11 +82,11 @@ const Sidebars = ({
                 <td></td>
                 <td className="border-t-2 text-center">
                   Total Time = <br />
-                  <span></span>
+                  <span>{totalPreparationTime} mins</span>
                 </td>
                 <td className="border-t-2 text-center">
                   Total Calories = <br />
-                  <span>0</span>
+                  <span>{totalCalories}</span>
                 </td>
               </tr>
               {/*  */}

@@ -32,7 +32,7 @@ function App() {
 
   ///////
   const [currentCooking, setCurrentCooking] = useState([]);
-
+  // const [totalTime, setTotalTime] = useState([]);
   const handlePreparing = (id) => {
     // console.log("clicked", id);
     const selectedRecipe = foodInfos.find((recipe) => recipe.recipe_id === id);
@@ -62,9 +62,9 @@ function App() {
         <div className="text-center md:max-w-3xl md:m-auto space-y-4">
           <h1 className="text-3xl font-semibold">Our Recipes</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur. Proin et feugiat senectus
-            vulputate netus pharetra rhoncus. Eget urna volutpat curabitur
-            elementum mauris aenean neque.{" "}
+            Dive into our recipe treasury, brimming with culinary inspiration
+            and expertly crafted dishes to elevate your home cooking experience
+            to new heights{" "}
           </p>
         </div>
         {/* heading ends */}
